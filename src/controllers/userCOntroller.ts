@@ -4,8 +4,6 @@ import { Error } from 'mongoose'
 import User from '../models/userModel'
 import sendToken from '../util/jwtToken'
 
-
-
 // Register a user
 const registerUser = async (req: Request, res: Response) => {
   const { name, email, password } = req.body
