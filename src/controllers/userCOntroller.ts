@@ -80,8 +80,8 @@ const forgotPassword = async (
 
   try {
     await sendEmail ({
-      email: user.email,
-      subject: `Password Recovery`,
+    email: user.email,
+    subject: `Password Recovery`,
       
 
     })
