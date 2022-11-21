@@ -1,10 +1,8 @@
 import { NextFunction, Request, Response } from 'express'
-import Features from '../util/apifeatures'
 import Product from '../models/productModel'
 import productService from '../services/productServices'
 
 // Create Product--ADMIN
-
 const createProduct = async (req: Request, res: Response) => {
   try {
     res.status(200).json(await productService.createProduct(req.body))
@@ -12,8 +10,8 @@ const createProduct = async (req: Request, res: Response) => {
     return next(error)
   }
 }
-// Get All products
 
+// Get All products
 const getAllProducts = async (req: Request, res: Response) => {
   try {
     res.status(200).json(await productService.getAllProducts())
@@ -21,6 +19,7 @@ const getAllProducts = async (req: Request, res: Response) => {
     return next(error)
   }
 }
+
 // Update Product -- Admin
 const updateProducts = async (
   req: Request,
@@ -44,6 +43,7 @@ const updateProducts = async (
     product,
   })
 }
+
 // Delete a Product
 const deleteProduct = async (
   req: Request,
